@@ -1,0 +1,120 @@
+/*
+    CSS stylesheet for Assignment 2-1 CSS Examples for both pages
+    Author: Abby Poplawski
+    Created: 1/20/2023
+*/
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+h3 {
+    font-size: 1.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0px 25px;
+    color: #1E688B;
+}
+p {
+    font-size: 1.3em;
+    margin: 0px 0px 25px 0px;
+    padding: 0px 25px;
+    line-height: 1.45em;
+}
+header {
+    background-image: url(../Assignment_2-1/images/pexels-suzy-hazelwood-1629236.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 100px 50px 50px 115px;
+}
+header h1, h2 {
+    color: #ffffff;
+    text-shadow: 0px 0px 5px #000000, 0px 0px 5px #000000, 0px 0px 5px #000000;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.contentContainer {
+    border: 1px solid #909090;
+    border-radius: 5px;
+    width: 65%;
+    margin: 0 auto 65px auto;
+    background-color: #fefefe;
+    box-shadow: 0px 0px 10px #0e152547;
+}
+img {
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+/* button rules */
+a.button {
+    text-decoration: none;
+    border: 1px solid #A6566B;
+    border-radius: 5px;
+    padding: 15px 30px;
+    margin: 15px 0px 15px 0px;
+    background-image: linear-gradient(#c36880, #874254);
+    color: #fefefe;
+    box-shadow: 0px 0px 5px #0E1525;
+}
+a.button:hover {
+    background-image: linear-gradient(#d0718b, #954b5f);
+    color:#fefefe;
+}
+
+/* inspoTag rules */
+.inspoTag {
+    width: 65%;
+    margin: 75px auto 25px auto;
+    text-align: center;
+}
+
+/* blueBox rules */
+.blueBox {
+    width: fit-content;
+    background-color: #0E1525dd;
+    padding: 75px 50px;
+    margin-bottom: -75px;
+    border-radius: 5px;
+}
+
+/* twoColumns rules */
+.twoColumns {
+    column-count: 2;
+    column-width: 250px;
+    column-gap: 0;
+    column-rule: 1px solid #0E1525;
+}
+.twoColumns h3 {
+    column-span: all;
+}
+
+/* pagination rules */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 0px 35px 0px;
+}
+.pagination a {
+    border: 1px solid #909090;
+    border-radius: 5px;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 0px 30px 5px 30px;
+    color: #1E688B;
+}
+.pagination a:hover {
+    color: #F2F2F2;
+    background-color: #1E688B;
+}
+.pagination p {
+    margin: 0;
+}
+
+/* imageFilter rules */
+.imageFilter {
+    filter: opacity(50%);
+}

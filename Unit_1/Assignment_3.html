@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment 1-3 Specificity Example Web Page">
+    <meta name="author" content="Abby Poplawski">
+    <title>Assignment 1-3</title>
+    <style>
+        body {
+            margin: 45px auto;
+            width: 75%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: rgb(244, 243, 243);
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        h3 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 500;
+            font-size: 1.2em;
+            line-height: 1.6em;
+        }
+
+        p {
+            margin: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.3em;
+            line-height: 1.4em;
+        }
+
+        p::first-line {
+            font-size: 1.2em;
+            color: black;
+        }
+
+        div p::first-letter {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.3em;
+        }
+
+        div p {
+            margin: 45px;
+            color: blue;
+        }
+
+        .firstClass {
+            margin: 80px;
+            color: green;
+            font-size: 1.45em;
+        }
+
+        p.secondClass {
+            font-size: 1.1em;
+            margin: 65px;
+            color: darkblue;
+        } 
+        
+        #firstID {
+            font-size: 1.8em;
+            margin: 35px 150px;
+            color: purple;
+        }
+
+        #secondID {
+            margin: 25px;
+            line-height: 2em;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>WDV 205 - Advanced CSS</h1>
+    <h2>Assignment 1-3 Specificity Example Web Page</h2>
+
+    <h3>For the rest of the page beginning in the next paragraph, the text will be in paragraph elements. To show specificity, the paragraphs will be styled differently.</h3>
+
+    <p>This is a regular paragraph. All the paragraph elements have a pseudo element for the first line, making them larger and keeping the color black.</p>
+
+    <div>
+        <p>This paragraph is in within div tags, so the spacing and the color get overriden. Paragraphs with div tags also get a pseudo element to style the first letter.</p>
+    </div>
+
+    <p class="firstClass">This paragraph has its own class, so its color, size, and spacing is set different from the paragraph above.</p>
+
+    <div>
+        <p class="firstClass">This paragraph is within div tags and has a class. It gets the first letter changed because it's in div tags, but the rest of its styling it gets from the class.</p>
+    </div>
+
+    <p class="secondClass" class="firstClass">This paragraph has two classes. The first is a generic class, the second one specific for p elements. The second one didn't override the first until I listed the second class before the first in the p tag.</p>
+
+    <p id="firstID">This paragraph has an ID, so the color, size, and spacing are made unique for this paragraph.</p>
+
+    <p class="firstClass" id="secondID">This paragraph has an ID and a class. It gets its size and spacing from the ID, and it gets its font color from the class.</p>
+</body>
+</html>

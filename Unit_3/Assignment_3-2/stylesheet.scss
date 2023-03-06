@@ -1,0 +1,233 @@
+/*
+    SCSS file for the Summit Farms website
+    Author: Abby Poplawski
+    Created: 2/6/2023
+*/
+/* SCSS variables and rules */
+    $primary-color: #D9AF62;
+    $accent-1: #1b252d;
+    $accent-2: #f9f9f9;
+    $accent-3: #B0A2BB;
+    $background-color: #e5e3ee;
+    $main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    $heading-font: Georgia, Times, "Times New Roman", serif; 
+
+    @mixin title-tag {
+        background-color: #1b252de5;
+        color: $accent-2;
+        padding: 50px 50px 55px 50px;
+        margin-top: 30px;
+        border-radius: 3px;
+    }
+
+    @mixin h1-format {
+        margin: 0;
+        padding: 20px 50px;
+        font-family: $heading-font;
+        font-size: 2em;
+    }
+
+    @mixin purple-links {
+        a {
+            color: $accent-3;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #63576d;
+        }
+    }
+
+/* CSS rules */
+body {
+    margin: 0;
+    background-color: $background-color;
+    font-family: $main-font;
+}
+
+/* header rules */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0;
+    padding: 120px 75px 0 75px;
+    background-image: url(images/snowy_mountains_banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ header h1 {
+    margin: 0;
+    font-size: 2.7em;
+    font-family: $heading-font;
+    @include title-tag();
+}
+
+/* nav rules */
+nav {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+}
+nav {
+    ul {
+        margin: 0;
+        padding: 15px;
+        list-style: none;
+    }
+    li {
+        display: inline;
+    }
+    a {
+        text-decoration: none;
+        font-size: 1.5em;
+        color: #000000;
+        margin: 0 20px;
+    }
+    a:hover {
+        color: #6e572a;
+    }
+}
+
+/* section rules and classes */
+section.info-page {
+    border: 1px solid $accent-3;
+    border-radius: 5px;
+    width: 80%;
+    margin: 80px auto;
+    background-color: #f9f9f9;
+}
+section.info-page {
+    h1 {
+        background-color: $accent-1;
+        color: $accent-2;
+       @include h1-format; 
+    }
+    h3 {
+        margin: 35px 85px;
+        font-size: 1.65em;
+        font-family: $heading-font;
+    }
+    p {
+        margin: 35px 85px;
+        font-size: 1.3em;
+    }
+    @include purple-links();
+}
+section.full-width {
+    margin: 0;
+    padding: 20px 0;
+    background-color: $accent-2;
+    display: flex;
+    justify-content: center;
+}
+section.full-width {
+    h1 {
+        color: $accent-1;
+        @include h1-format();
+    }
+    div {
+        border: 1px solid $accent-3;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    h3{
+        text-align: center;
+        font-size: 1.3em;
+    }
+    p {
+        text-align: center;
+        font-size: 1.3em;
+        width: 65%;
+    }
+    @include purple-links();
+}
+section.full-width-2 {
+    margin: 0;
+    padding: 35px 0 100px 0;
+    background-color: $accent-2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section.full-width-2 {
+    div {
+        border: 1px solid $accent-3;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #b0a2bbc5;
+        display: flex;
+        width: 80%;
+        margin: 30px auto;
+    }
+    img {
+        height: 450px;
+    }
+    aside {
+        padding: 20px 35px;
+    }
+    h3 {
+        font-size: 1.45em;
+    }
+    p {
+        font-size: 1.3em;
+    }
+}
+
+/* button rules */
+button {
+    background-image: linear-gradient($primary-color, #ac894a);
+    color: $accent-1;
+    font-size: 1em;
+    padding: 15px 30px;
+    border: 1px solid $accent-1;
+    border-radius: 5px;
+}
+button:hover {
+    background-image: linear-gradient(#ac894a, #584521);
+    color: $accent-2;
+}
+
+/* footer rules */
+footer {
+    background-color: $accent-1;
+    color: $accent-2;
+    display: flex;
+    padding: 30px;
+    justify-content: space-evenly;
+}
+footer {
+    section {
+        padding: 20px 30px;
+    }
+    h3 {
+        font-size: 1.36em;
+    }
+    ul {
+        margin: 0;
+        list-style: none;
+    }
+    p, li {
+        font-size: 1.2em;
+    }
+    a {
+        font-size: 1.1em;
+    }
+    @include purple-links();
+}
+.office-hours {
+    column-count: 2;
+    column-gap: 0;
+}
+.office-hours {
+    h3 {
+        column-span: all;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+}
+.copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}

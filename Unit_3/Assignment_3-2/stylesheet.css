@@ -1,0 +1,231 @@
+/*
+    SCSS file for the Summit Farms website
+    Author: Abby Poplawski
+    Created: 2/6/2023
+*/
+/* SCSS variables and rules */
+/* CSS rules */
+body {
+  margin: 0;
+  background-color: #e5e3ee;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* header rules */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+  padding: 120px 75px 0 75px;
+  background-image: url(images/snowy_mountains_banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.7em;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  background-color: rgba(27, 37, 45, 0.8980392157);
+  color: #f9f9f9;
+  padding: 50px 50px 55px 50px;
+  margin-top: 30px;
+  border-radius: 3px;
+}
+
+/* nav rules */
+nav {
+  background-color: #D9AF62;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 15px;
+  list-style: none;
+}
+nav li {
+  display: inline;
+}
+nav a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #000000;
+  margin: 0 20px;
+}
+nav a:hover {
+  color: #6e572a;
+}
+
+/* section rules and classes */
+section.info-page {
+  border: 1px solid #B0A2BB;
+  border-radius: 5px;
+  width: 80%;
+  margin: 80px auto;
+  background-color: #f9f9f9;
+}
+
+section.info-page h1 {
+  background-color: #1b252d;
+  color: #f9f9f9;
+  margin: 0;
+  padding: 20px 50px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 2em;
+}
+section.info-page h3 {
+  margin: 35px 85px;
+  font-size: 1.65em;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+section.info-page p {
+  margin: 35px 85px;
+  font-size: 1.3em;
+}
+section.info-page a {
+  color: #B0A2BB;
+  text-decoration: none;
+}
+section.info-page a:hover {
+  color: #63576d;
+}
+
+section.full-width {
+  margin: 0;
+  padding: 20px 0;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+}
+
+section.full-width h1 {
+  color: #1b252d;
+  margin: 0;
+  padding: 20px 50px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 2em;
+}
+section.full-width div {
+  border: 1px solid #B0A2BB;
+  border-radius: 5px;
+  margin: 10px;
+}
+section.full-width h3 {
+  text-align: center;
+  font-size: 1.3em;
+}
+section.full-width p {
+  text-align: center;
+  font-size: 1.3em;
+  width: 65%;
+}
+section.full-width a {
+  color: #B0A2BB;
+  text-decoration: none;
+}
+section.full-width a:hover {
+  color: #63576d;
+}
+
+section.full-width-2 {
+  margin: 0;
+  padding: 35px 0 100px 0;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.full-width-2 div {
+  border: 1px solid #B0A2BB;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(176, 162, 187, 0.7725490196);
+  display: flex;
+  width: 80%;
+  margin: 30px auto;
+}
+section.full-width-2 img {
+  height: 450px;
+}
+section.full-width-2 aside {
+  padding: 20px 35px;
+}
+section.full-width-2 h3 {
+  font-size: 1.45em;
+}
+section.full-width-2 p {
+  font-size: 1.3em;
+}
+
+/* button rules */
+button {
+  background-image: linear-gradient(#D9AF62, #ac894a);
+  color: #1b252d;
+  font-size: 1em;
+  padding: 15px 30px;
+  border: 1px solid #1b252d;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-image: linear-gradient(#ac894a, #584521);
+  color: #f9f9f9;
+}
+
+/* footer rules */
+footer {
+  background-color: #1b252d;
+  color: #f9f9f9;
+  display: flex;
+  padding: 30px;
+  justify-content: space-evenly;
+}
+
+footer section {
+  padding: 20px 30px;
+}
+footer h3 {
+  font-size: 1.36em;
+}
+footer ul {
+  margin: 0;
+  list-style: none;
+}
+footer p, footer li {
+  font-size: 1.2em;
+}
+footer a {
+  font-size: 1.1em;
+}
+footer a {
+  color: #B0A2BB;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #63576d;
+}
+
+.office-hours {
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 0;
+       column-gap: 0;
+}
+
+.office-hours h3 {
+  -moz-column-span: all;
+       column-span: all;
+}
+.office-hours li {
+  margin-bottom: 10px;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}/*# sourceMappingURL=stylesheet.css.map */

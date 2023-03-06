@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment 3-1 CSS Preprocessor questions and answers">
+    <meta name="author" content="Abby Poplawski">
+    <title>Assignment 3-1</title>
+    <style>
+        body {
+            background-color: #F2F2F2;
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            width: 65%;
+            margin: 30px auto;
+            border: 1px solid #5d5d5d;
+            border-radius: 5px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 5px #afafaf;
+        }
+        /* header rules */
+        header {
+            padding: 30px;
+            background-color: #021f51;
+        }
+        header h1, h2 {
+            margin: 3px;
+            color: #ffffff;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        /* order list rules */
+        ol[type|="1"] {
+            padding: 20px 65px;
+            font-size: 1.2em;
+        }
+        ol > li {
+            margin: 15px;
+            line-height: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WDV 205 - Advanced CSS</h1>
+            <h2>Assingment 3-1 CSS Preprocessors</h2>
+        </header>
+
+        <ol type="1">
+            <li><strong>What does a CSS Preprocessor do?</strong>
+                <ol type="a">
+                    <li>CSS Preprocessors seem to extend the abilities and somewhat shorten the way you can write some CSS styles by using certain syntax and then translating that into CSS. They add the ability to use resources that other languages have such as variables, loops, and if/else statements. In short, they are programming languages that translate into and can work with CSS.</li>
+                </ol>
+            </li>
+
+            <li><strong>What are the advantages of using a CSS Preprocessor?</strong>
+                <ol type="a">
+                    <li>Since there is more available functionality to the preprocessor language, you don't have to repeat as much code when you write it. For instance, instead of writing the same color everywhere you need it, you can make a variable and use the variable. It also makes changing that color easier because you only need to change it in one place. It can also help the code be more organized, especially if the repeated variables and such are located at the top. This in turn can make coding go faster.</li>
+                </ol>
+            </li>
+
+            <li><strong>What are the disadvantages or issues you need to consider when using a CSS Preprocessor?</strong>
+                <ol type="a">
+                    <li>Some of the disadvantages include issues with compilation, debugging, and file size. Since there is a compilation step, that can slow down production and makes finding bugs difficult (because the file that can be seen is a CSS file and not the original file you wrote). And in generating the CSS file, you may end up with a much bigger file compared to the SCSS or LESS file that you started with.</li>
+                </ol>
+            </li>
+
+            <li><strong>List at least Three CSS Preprocessors currently available.</strong>
+                <ol type="a">
+                    <li>Three that came up a couple times: SCSS, LESS, and STYLUS.</li>
+                </ol>
+            </li>
+
+            <li><strong>Research Web Development jobs and see how many of them list a CSS Preprocessor as one of their desired skills.</strong>
+                <ol type="a">
+                    <li>Mostly they list CSS as a language that you need to know or be familiar with. I didn't find any that specifically requested knowledge of a CSS preprocessor. </li>
+                </ol>
+            </li>
+        </ol>
+    </div><!-- close container div -->
+</body>
+</html>

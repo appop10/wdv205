@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment 1-1">
+    <meta name="author" content="Abby Poplawski">
+    <title>Assignment 1-1</title>
+    <style>
+        body {
+            width: 75%;
+            margin: 75px auto;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        h1 {
+            margin: 30px 0 5px 0;
+        }
+        h2 {
+            margin: 5px 0 30px 0;
+            font-size: 1.65em;
+        }
+        h3 {
+            margin: 55px 0 10px 0;
+            font-size: 1.35em;
+        }
+        p {
+            margin: 10;
+            padding-left: 30px;
+            font-size: 1.17em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        ul {
+            padding-left: 60px;
+            font-size: 1.17em;
+            line-height: 1.35em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        span {
+            padding-left: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WDV 205 - Advanced CSS</h1>
+    <h2>Assignment 1-1 Define CSS Terms</h2>
+
+    <h3>1. Specificity</h3>
+    <p><strong>Specificity</strong> indicates selectors have different values to the browser, which dictate their importance and in what order the browser will render any CSS rules.</p>
+    <ul>
+        <li>More specific selectors will overwrite any rules that conflict with less specific selectors. So, inline styles will overwrite class styles because they are more specific, therefore of higher importance.</li>
+    </ul>
+
+    <h3>2. Precedence</h3>
+    <p><strong>Precedence</strong> dictates that in cases of similar specificity, the browser will render the rule that is closer in proximity to the element.</p>
+    <ul>
+        <li>For example, the body can dictate the font type of all the elements within it, but you can change the font type of the h1 elements to be something different. If the body's font is set to Times New Roman, you can change the h1 elements to Arial. The rules for the h1 elements then become closer than the rules for the body, so the font type is rendered as Arial by the browser for the h1 elements.</li>
+    </ul>
+
+    <h3>3. Inheritance</h3>
+    <p><strong>Inheritance</strong> dictates that rules be passed down from parent elements and applied to their child elements as long as the child element didn't specify a different rule.</p>
+    <ul>
+        <li>Using the example from precedence, when the font type of the body is written a certain way, all other elements within it will take on that font type. If the body's font is set to Georgia, then unless written otherwise, any elements within will show up as Georgia font. The body acts as the parent element, so its children (i.e., h1, h2, and p elements) inherit the font automatically.</li>
+    </ul>
+
+    <h3>4. Property</h3>
+    <p>A <strong>property</strong> is a certain aspect of an element. It can also be described as a characteristic, and these dictate how one piece of an element can be displayed.</p>
+    <ul>
+        <li>Many elements have the same kinds of properties, such as font-family, color, and background-color.</li>
+        <li>In the example with the body element's font rules, the font-family would be a property of the body element, and it dictates what type of font the browser will render.</li>
+    </ul>
+
+    <h3>5. Value</h3>
+    <p>CSS rules come in property-value pairs. As defined above, the property defines what aspect the CSS is targeting, so the value acts as the action that is being done to the element.</p>
+    <ul>
+        <li>They are written as property: value; (ex. font-family: arial;)</li>
+        <li>By dictating<br><br>
+            body {<br>
+                <span>font-family: arial;</span><br>
+            }<br><br>
+            You are telling the browser that you're targeting the type of font you want to display in the body, and you want that font to be Arial.
+        </li>
+    </ul>
+
+    <h3>6. Selector</h3>
+    <p>A <strong>selector</strong> tells the browser which elements to target with CSS rules. It is the first thing written when defining a CSS rule.</p>
+    <ul>
+        <li>Selectors can also be classes and id's.</li>
+        <li>In the above example, body is the selector.</li>
+        <li>In this example<br><br>
+            .container {<br>
+                <span>color: red;</span><br>
+            }<br><br>
+            .container is the selector and defines a class that makes the color of the font on the page red.
+        </li>
+    </ul>
+</body>
+</html>

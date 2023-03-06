@@ -1,0 +1,264 @@
+/* 
+    Cookies! home page stylesheet
+    Author: Abby Poplawski
+    Created: 2/28/2023
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, 12.5%);
+  color: #0e1246;
+  font-size: 1.3em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-family: "Days One", tahoma, arial, sans-serif;
+}
+
+header {
+  grid-column: 1/9;
+  background-image: linear-gradient(rgba(173, 209, 218, 0.7960784314), rgba(214, 128, 194, 0.7960784314), rgba(217, 176, 129, 0.7960784314)), url(../images/assorted-cookie-pile.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header h1 {
+  color: #fff;
+  font-family: "Titan One", tahoma, arial, cursive;
+  font-size: 7em;
+  text-shadow: 3px 3px #0e1246;
+  text-align: center;
+  margin-top: 0.3em;
+}
+header img {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+
+nav {
+  grid-column: 1/9;
+}
+nav ul {
+  background-color: rgba(173, 209, 218, 0.6941176471);
+  text-align: center;
+  padding: 1em;
+}
+nav li {
+  list-style: none;
+  display: inline;
+  text-align: center;
+  margin: 1em 1.5em;
+  font-size: 1em;
+}
+nav a {
+  color: #0e1246;
+  text-decoration: none;
+}
+nav a:hover {
+  color: rgba(214, 128, 194, 0.6941176471);
+}
+nav img {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+
+#classic-flavors {
+  grid-column: 1/4;
+  width: 65%;
+  margin: -2em 0 0 5em;
+  background-color: rgba(173, 209, 218, 0.6941176471);
+  border-radius: 45px;
+  padding: 2em 1.5em;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+}
+#classic-flavors h2 {
+  margin: 1em 0;
+  font-family: "Days One", tahoma, arial, sans-serif;
+}
+#classic-flavors p {
+  line-height: 1.5em;
+}
+
+#mixing-flavors {
+  grid-column: 4/6;
+  margin-top: 5em;
+  background-color: rgba(214, 128, 194, 0.6941176471);
+  border-radius: 45px;
+  padding: 2em 1.5em;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+}
+#mixing-flavors h2 {
+  margin: 1em 0;
+  font-family: "Days One", tahoma, arial, sans-serif;
+}
+#mixing-flavors p {
+  line-height: 1.5em;
+}
+
+#fancy-flavors {
+  grid-column: 6/9;
+  width: 65%;
+  margin: -2em 0 0 15%;
+  background-color: rgba(217, 176, 129, 0.6941176471);
+  border-radius: 45px;
+  padding: 2em 1.5em;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+}
+#fancy-flavors h2 {
+  margin: 1em 0;
+  font-family: "Days One", tahoma, arial, sans-serif;
+}
+#fancy-flavors p {
+  line-height: 1.5em;
+}
+
+img[alt^="flavors,"] {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+main {
+  grid-column: 1/9;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin: 9em 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4392156863), rgba(0, 0, 0, 0.4392156863)), url(../images/macaroon-bowl.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main div {
+  grid-column: 2/3;
+  background-color: #add1da;
+  width: 80%;
+  margin: 5em auto;
+  padding: 1.5em 3em;
+  border-radius: 45px;
+}
+main p {
+  margin-top: 1.5em;
+  line-height: 1.5em;
+}
+
+#deals-top {
+  grid-column: 2/8;
+  background-color: rgba(173, 209, 218, 0.6941176471);
+  border-radius: 45px;
+  padding: 2em 3em;
+}
+#deals-top img {
+  display: block;
+  margin: 0 auto;
+  margin-top: -7em;
+}
+#deals-top h1 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 0.3em;
+}
+#deals-top p {
+  font-size: 1.1em;
+  text-align: center;
+  line-height: 1.7em;
+}
+
+#deals-seasonal {
+  grid-column: 2/5;
+  margin: 1em auto;
+  width: 98%;
+  height: 350px;
+  border-radius: 45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4392156863), rgba(0, 0, 0, 0.4392156863)), url(../images/choco-chip-pink-plate.jpg);
+}
+#deals-seasonal h1 {
+  color: #fff;
+  text-shadow: 3px 3px #0e1246;
+  text-align: center;
+  width: 90%;
+  height: 250px;
+  margin: 50px auto;
+  padding: 50px;
+  border-radius: 45px;
+}
+#deals-seasonal h1 {
+  background-color: rgba(214, 128, 194, 0.6941176471);
+}
+
+#deals-bundles {
+  grid-column: 5/8;
+  margin: 1em auto;
+  width: 98%;
+  height: 350px;
+  border-radius: 45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4392156863), rgba(0, 0, 0, 0.4392156863)), url(../images/lemon-cookie-basket.jpg);
+}
+#deals-bundles h1 {
+  color: #fff;
+  text-shadow: 3px 3px #0e1246;
+  text-align: center;
+  width: 90%;
+  height: 250px;
+  margin: 50px auto;
+  padding: 50px;
+  border-radius: 45px;
+}
+#deals-bundles h1 {
+  background-color: rgba(217, 176, 129, 0.6941176471);
+}
+
+footer {
+  grid-column: 1/9;
+  display: grid;
+  grid-template-columns: 35% 1fr 35%;
+  background-color: rgba(214, 128, 194, 0.6941176471);
+  margin-top: 5em;
+}
+footer img[alt^="logo,"] {
+  grid-column: 1/2;
+  width: 60%;
+  margin: 5em 0 0 6em;
+}
+footer div {
+  margin-top: 7em;
+  padding: 1em;
+}
+footer h3, footer p {
+  grid-column: 2/3;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  line-height: 1.5em;
+}
+footer img[alt^="cookie icon,"] {
+  grid-column: 3/4;
+}
+footer img[alt~=chip] {
+  width: 30%;
+  display: block;
+  margin-top: -6em;
+}
+footer img[alt~=dark] {
+  width: 55%;
+  margin-left: 3em;
+}/*# sourceMappingURL=home_stylesheet.css.map */

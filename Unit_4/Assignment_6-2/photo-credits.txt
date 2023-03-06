@@ -1,0 +1,14 @@
+Photo credits: 
+    macarroon-bowl:     Photo by Brigitte Tohm: https://www.pexels.com/photo/french-macarons-in-bowl-239581/
+    choco-chip-pink-plate:  Photo by Sara Santos: https://www.pexels.com/photo/cookies-in-ceramic-plates-1020585/
+    assorted-cookie-pile:   Photo by Leigh Patrick: https://www.pexels.com/photo/selective-photo-of-cookies-on-container-298217/
+    macaroon-stack-present:     Photo by George Dolgikh: https://www.pexels.com/photo/macaroons-beside-gift-box-2072173/
+    choco-choco-cookies-milk:   Photo by Marta Dzedyshko: https://www.pexels.com/photo/baked-cookies-2067424/
+    jelly-cookies-mug:  Photo by Pixabay: https://www.pexels.com/photo/appetizer-baked-baking-black-433120/
+    lemon-cookie-basket:    Photo by Cats Coming: https://www.pexels.com/photo/basket-of-baked-cookies-835757/
+    big-sugar-cookie:   Photo by Keegan Evans: https://www.pexels.com/photo/brown-cookie-on-white-round-plate-105589/
+    choco-chip-cookie-columns:     Photo by Brigitte Tohm: https://www.pexels.com/photo/brown-cookies-189536/
+    cookie-bowl:    Photo by Pixabay: https://www.pexels.com/photo/biscuits-cookies-cooking-delicious-266706/
+
+site to remeber: 
+https://www.geeksforgeeks.org/how-to-style-a-dropdown-using-css/

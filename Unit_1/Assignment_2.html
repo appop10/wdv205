@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment 1-2">
+    <meta name="author" content="Abby Poplawski">
+    <title>Assignment 1-2</title>
+    <style>
+        body {
+            width: 75%;
+            margin: 75px auto;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        h1 {
+            margin: 30px 0 5px 0;
+        }
+        h2 {
+            margin: 5px 0 30px 0;
+            font-size: 1.65em;
+        }
+        h3 {
+            margin: 35px 0 10px 0;
+            font-size: 1.35em;
+        }
+        ol {
+            margin: 0;
+            padding-left: 50px;
+            font-size: 1.17em;
+            line-height: 1.35em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        span {
+            padding-left: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WDV 205 - Advanced CSS</h1>
+    <h2>Assignment 1-2 Basic CSS Selectors</h2>
+
+    <!-- First selector -->
+    <h3>Element Selector</h3>
+    <ol>
+        <li>The first part of defining a CSS rule. It can be any element because it is the term used to describe which element the CSS rule should apply to.</li>
+        <li>Use the element selector whenever you wish to style an element.</li>
+        <li>The basic layout of a CSS rule:<br><br>
+            element {<br>
+                <span>CSS declarations</span><br>
+            }<br>
+        </li>
+    </ol>
+
+    <!-- Second selector -->
+    <h3>Universal Selector</h3>
+    <ol>
+        <li>Chooses all the HTML elements on a page.</li>
+        <li>Use the universal selector when you have a very general rule you wish to apply to the whole page, such as a background color or if you want to align everything a certain way.</li>
+        <li>An * is the symbol, so it would look like:<br><br>
+            * {<br>
+                <span>CSS declarations</span><br>
+            }<br>
+        </li>
+    </ol>
+
+    <!-- Third selector -->
+    <h3>Group Selector</h3>
+    <ol>
+        <li>Chooses multiple elements at the same time.</li>
+        <li>Use the group selector when you have a rule that you want to apply to serval different elements.</li>
+        <li>When the elements are grouped, they will have commas in between them like so: <br><br>
+            h1, h2, h3 {<br>
+                <span>CSS declarations</span><br>
+            }<br>
+        </li>
+    </ol>
+
+    <!-- Fourth selector -->
+    <h3>Pseudo Selectors</h3>
+    <ol>
+        <li>In general, they can style a specific characteristic or part of an element. There are two types, pseudo class and pseudo element.</li>
+        <li>For the most part, I've seen them used on <a> elements to make the links look different than just a plain hyperlink.</li>
+        <li>A very common example in my own work:<br><br>
+            a:hover {<br>
+                <span>color: red;</span><br>
+            }<br><br>
+            Makes the link red when you mouse over it.
+        </li>
+    </ol>
+
+    <!-- Fifth selector -->
+    <h3>Pseudo Elements</h3>
+    <ol>
+        <li>Can style specific parts of an element.</li>
+        <li>Used when you want to target the first letter or first line of an element. It can also be used to insert content before/after certain elements.</li>
+        <li>To differentiate it from the pseudo class, pseudo elements use ::<br><br>
+            p::first-line {<br>
+                <span>color: red;</span><br>
+            }<br><br>
+            Makes the first line of paragraph elements red.
+        </li>
+    </ol>
+
+    <!-- Sixth selector -->
+    <h3>Descendant Selector</h3>
+    <ol>
+        <li>Chooses elements that are nested within other elements.</li>
+        <li>Use when you want to target certain elements, but not necessarily all of the same type of elements. For example, you only want to target the p elements that are nested in div elements, and ignore the p elements outside of the div elements.</li>
+        <li>To denote a descendent, there is only a space between the elements: <br><br>
+            div p {<br>
+                <span>color: red;</span><br>
+            }<br><br>
+            Makes all of the p elements within a div red.
+        </li>
+    </ol>
+
+    <!-- Seventh selector -->
+    <h3>Class Selector, Dependent and Independent </h3>
+    <ol>
+        <li>Defines CSS rules for elements that have that class assigned to them. Independent means that they stand alone and can apply to any element with that class. Dependent means that they are assigned to a specific element, and only those elements that have that class designation will take on those characteristics.</li>
+        <li>Used when you want to write a CSS rule that you can apply to a variety of situations and elements. Since it is more specific, it can also override less specific rules, such as any applied by the previous selectors.</li>
+        <li>Define a class by starting with a period and then naming it:<br><br>
+            .className {<br>
+                <span>color: red;</span><br>
+            }<br><br>
+            Makes the element with the class name className the color red.
+        </li>
+    </ol>
+
+    <!-- Eighth selector -->
+    <h3>ID Selector, Dependent and Independent </h3>
+    <ol>
+        <li>Basically the same definition as a class; however, IDs are usually unique to one element so that they can be targeted by more than just the CSS (usually JavaScript).</li>
+        <li>It can be used to override even a class CSS rule, and it is also used to target the specific element by other languages such as JavaScript.</li>
+        <li>The # is used instead of a period:<br><br>
+            #idName {<br>
+                <span>color: red;</span><br>
+            }<br><br>
+            Makes the element with the id name idName the color red. It also allows the element to be found and targeted with JavaScript commands.
+        </li>
+    </ol>
+</body>
+</html>

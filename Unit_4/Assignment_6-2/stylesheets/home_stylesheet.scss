@@ -1,0 +1,253 @@
+/* 
+    Cookies! home page stylesheet
+    Author: Abby Poplawski
+    Created: 2/28/2023
+*/
+// fonts
+$logo-font: 'Titan One', tahoma, arial, cursive;
+$heading-font: 'Days One', tahoma, arial, sans-serif;
+// colors
+$main-color: #add1dab1;
+$accent-1: #d680c2b1;
+$accent-2: #d9b081b1;
+$font-color: #0e1246;
+// sizes
+$base-font-size: 1.3em;
+$border-radius: 45px;
+// mixins
+@mixin centered-image {
+    display: block;
+    margin: 0 auto;
+}
+@mixin flavor-section-settings {
+    border-radius: $border-radius;
+    padding: 2em 1.5em;
+    height: fit-content;
+    text-align: center;
+
+    h2 {
+        margin: 1em 0;
+        font-family: $heading-font;
+    }
+    p {
+        line-height: 1.5em;
+    }
+}
+@mixin background-image-settings {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@mixin deals-settings {
+    margin: 1em auto;
+    width: 98%;
+    height: 350px;
+    border-radius: $border-radius;
+
+    h1 {
+        color: #fff;
+        text-shadow: 3px 3px $font-color;
+        text-align: center;
+        width: 90%;
+        height: 250px;
+        margin: 50px auto;
+        padding: 50px;
+        border-radius: $border-radius;
+    }
+}
+// body rules
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+    color: $font-color;
+    font-size: $base-font-size;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+    font-family: $heading-font;
+}
+// header rules
+header {
+    grid-column: 1/9;
+    background-image: 
+        linear-gradient(#add1dacb, #d680c2cb, #d9b081cb),
+        url(../images/assorted-cookie-pile.jpg);
+    @include background-image-settings();
+
+    h1 {
+        color: #fff;
+        font-family: $logo-font;
+        font-size: 7em;
+        text-shadow: 3px 3px $font-color;
+        text-align: center;
+        margin-top: 0.3em;
+    }
+    img {
+        width: 30%;
+        @include centered-image();
+    }
+}
+// nav rules
+nav {
+    grid-column: 1/9;
+
+    ul {
+        background-color: $main-color;
+        text-align: center;
+        padding: 1em;
+    }
+    li {
+        list-style: none;
+        display: inline;
+        text-align: center;
+        margin: 1em 1.5em;
+        font-size: 1em;
+    }
+    a {
+        color: $font-color;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $accent-1;
+    }
+    img {
+        width: 30%;
+        @include centered-image();
+    }
+}
+// flavor sections
+#classic-flavors {
+    grid-column: 1/4;
+    width: 65%;
+    margin: -2em 0 0 5em;
+    background-color: $main-color;
+    @include flavor-section-settings();
+}
+#mixing-flavors {
+    grid-column: 4/6;
+    margin-top: 5em;
+    background-color: $accent-1;
+    @include flavor-section-settings();
+}
+#fancy-flavors {
+    grid-column: 6/9;
+    width: 65%;
+    margin: -2em 0 0 15%;
+    background-color: $accent-2;
+    @include flavor-section-settings();
+}
+img[alt^="flavors,"] {
+    width: 100%;
+    @include centered-image();
+}
+// main rules
+main {
+    grid-column: 1/9;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: 9em 0;
+    background-image: 
+        linear-gradient(#00000070, #00000070), 
+        url(../images/macaroon-bowl.jpg);
+    @include background-image-settings();
+
+    div {
+        grid-column: 2/3;
+        background-color: #add1da;
+        width: 80%;
+        margin: 5em auto;
+        padding: 1.5em 3em;
+        border-radius: $border-radius;
+    }
+    p {
+        margin-top: 1.5em;
+        line-height: 1.5em;
+    }
+}
+// deals rules
+#deals-top {
+    grid-column: 2/8;
+    background-color: $main-color;
+    border-radius: $border-radius;
+    padding: 2em 3em;
+
+    img {
+        @include centered-image();
+        margin-top: -7em;
+    }
+    h1 {
+        font-size: 3em;
+        text-align: center;
+        margin-bottom: 0.3em;
+    }
+    p {
+        font-size: 1.1em;
+        text-align: center;
+        line-height: 1.7em;
+    }
+}
+#deals-seasonal {
+    grid-column: 2/5;
+    @include deals-settings();
+    @include background-image-settings();
+    background-image: 
+        linear-gradient(#00000070, #00000070), 
+        url(../images/choco-chip-pink-plate.jpg);
+
+    h1 {
+        background-color: $accent-1;
+    }
+}
+#deals-bundles {
+    grid-column: 5/8;
+    @include deals-settings();
+    @include background-image-settings();
+    background-image: 
+        linear-gradient(#00000070, #00000070), 
+        url(../images/lemon-cookie-basket.jpg);
+
+    h1 {
+        background-color: $accent-2;
+    }
+}
+// footer rules
+footer {
+    grid-column: 1/9;
+    display: grid;
+    grid-template-columns: 35% 1fr 35%;
+    background-color: $accent-1;
+    margin-top: 5em;
+
+    img[alt^="logo,"] {
+        grid-column: 1/2;
+        width: 60%;
+        margin: 5em 0 0 6em;
+    }
+    div {
+        margin-top: 7em;
+        padding: 1em;
+    }
+    h3, p {
+        grid-column: 2/3;
+        height: fit-content;
+        text-align: center;
+        line-height: 1.5em;
+    }
+    img[alt^="cookie icon,"] {
+        grid-column: 3/4;
+    }
+    img[alt~="chip"] {
+        width: 30%;
+        display: block;
+        margin-top: -6em;
+    }
+    img[alt~="dark"] {
+        width: 55%;
+        margin-left: 3em;
+    }
+}

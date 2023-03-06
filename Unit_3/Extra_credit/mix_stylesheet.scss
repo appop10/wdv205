@@ -1,0 +1,40 @@
+/*
+    Mixin stylesheet for Unit 3 Extra Credit Assignment
+    Author: Abby Poplawski
+    Created: 2/12/2023
+*/
+$accent-1: #202A25;
+$accent-2: #ffffff;
+$accent-3: #AA4465;
+
+@mixin pagination {
+    a {
+        text-decoration: none;
+        color: $accent-1;
+    }
+    a:hover {
+        color: $accent-3;
+    }
+}
+
+@mixin textarea-dimensions {
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+}
+
+@mixin buttons {
+    a {
+        text-decoration: none;
+        border: 3px solid $accent-1;
+        border-radius: 5px;
+        background-color: $accent-2;
+        padding: 15px 35px;
+        font-size: 1.3em;
+        color: $accent-3;
+    }
+    a:hover {
+        background-color: $accent-1;
+    }
+}
