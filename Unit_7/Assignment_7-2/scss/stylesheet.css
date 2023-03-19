@@ -1,0 +1,180 @@
+/* 
+    SCSS file for basicPage.html
+    Author: Abby Poplawski
+    Created: 2/22/2023
+*/
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #dad3ba;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  padding: 25px;
+  background-color: #0a9bc7;
+}
+header h1 {
+  align-self: flex-end;
+  font-size: 2.5em;
+  margin-left: 0.5em;
+}
+header img {
+  border: 2px solid #000;
+  margin: 0 1em;
+}
+
+nav {
+  background-color: #048abf;
+  display: flex;
+  justify-content: center;
+}
+nav h1 {
+  margin: 0.65em 1.5em;
+  font-size: 1.45em;
+}
+
+#midSection {
+  display: flex;
+}
+#midSection img[alt|="web development"] {
+  border: 2px solid #000;
+  width: 100%;
+}
+#midSection img[alt|=software] {
+  border: 2px solid #000;
+  width: 30%;
+  height: 150px;
+  margin: 5px;
+}
+#midSection h3 {
+  text-align: center;
+}
+
+#midSection > div {
+  padding: 35px;
+  flex-basis: 50%;
+}
+#midSection > div section {
+  -moz-column-count: 2;
+       column-count: 2;
+}
+#midSection > div section p {
+  margin: 0;
+  padding-bottom: 25px;
+  line-height: 1.3em;
+}
+#midSection > div form {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #000;
+  padding: 0 25px;
+  background-color: #ef9d0c;
+}
+#midSection > div form p {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+#midSection > div form p label {
+  flex-basis: 25%;
+  font-weight: 600;
+  text-align: end;
+  padding-right: 10px;
+}
+#midSection > div form p input {
+  flex-basis: 75%;
+}
+#midSection > div form p textarea {
+  flex-basis: 75%;
+  resize: none;
+}
+#midSection > div form p input[id|=button] {
+  font-size: 1.3em;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px 10px;
+  flex-basis: 25%;
+  background-color: #048abf;
+  color: #fff;
+  margin-left: 25%;
+}
+#midSection > div form p input[id|=button2] {
+  font-size: 1.3em;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px 10px;
+  flex-basis: 25%;
+  background-color: #d85b2e;
+  color: #fff;
+}
+
+footer {
+  background-color: #048abf;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+footer h1 {
+  margin: 25px 35px;
+}
+footer section {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 25%;
+  margin: 25px 35px;
+}
+footer section img {
+  height: 60px;
+}
+footer section img[alt$=instagram] {
+  border-radius: 20px;
+}
+footer section img[alt$=facebook] {
+  border-radius: 10px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1100px) {
+  #midSection {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+  nav h1 {
+    font-size: 80%;
+  }
+  #midSection img[alt|=software] {
+    height: 50%;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer h1 {
+    font-size: 1.2em;
+  }
+  footer section {
+    width: 100%;
+    justify-content: flex-end;
+    margin: 10px;
+  }
+  footer section img {
+    height: 2em;
+    padding: 0;
+    margin: 10px;
+  }
+}/*# sourceMappingURL=stylesheet.css.map */

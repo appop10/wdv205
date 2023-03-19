@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unit 6 Assignment 3 CSS grid form">
+    <meta name="author" content="Abby Poplawski">
+    <title>Order - Cookies!</title>
+
+    <link rel="stylesheet" href="stylesheets/order_stylesheet.css">
+    <link rel="stylesheet" href="stylesheets/order_stylesheet.scss">
+    <script src="menu_displays.js"></script>
+
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Days+One&family=Titan+One&display=swap">
+
+    <!-- hamburder menu link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Order Cookies!</h1>
+            <img src="images/top-half-cookie.png" alt="logo, sugar cookie top half">
+        </header>
+        
+        <nav>
+            <ul>
+                <a href="javascript:void(0);" class="icon" onclick="displayLinks()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <li><a href="Cookies_home.html" class="navigation">Home</a></li>
+                <li><a href="order_page.html" class="navigation">Order</a></li>
+                <li><a href="Cookies_home.html #classic-flavors" class="navigation">Cookies</a></li>
+                <li><a href="Cookies_home.html #deals-top" class="navigation">Deals</a></li>
+                <li><a href="Cookies_home.html #about" class="navigation">About</a></li>
+            </ul>
+
+            <img src="images/bottom-half-cookie.png" alt="logo, sugar cookie bottom half">
+        </nav><!-- close nav -->
+
+        <form method="post" action="#">
+            <section id="info-section">
+                <h1>Customer Information</h1>
+                <!-- name and email -->
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name" placeholder="Jane">
+
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" placeholder="Doe">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="email@example.com">
+
+                <!-- address -->
+                <label for="street">Address</label>
+                <input type="text" name="street" id="street" placeholder="123 Address St Unit 4">
+
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" placeholder="Ames">
+
+                <label for="state">State</label>
+                <select name="state" id="state">
+                    <option value="">Please Select</option>
+                    <option value="Il">Illinois</option>
+                    <option value="IA">Iowa</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MO">Missouri</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="WI">Wisconsin</option>
+                </select>
+
+                <label for="zip-code">Zip Code</label>
+                <input type="text" name="zip-code" id="zip-code" placeholder="12345">
+
+                <!-- radio buttons -->
+                <p>Method</p>
+                <p>
+                    <input type="radio" name="delivery-method" id="pick-up" value="pick-up" checked="true">
+                    <label for="pick-up" class="check-or-radio">Pick up</label>
+
+                    <input type="radio" name="delivery-method" id="delivery" value="delivery">
+                    <label for="delivery" class="check-or-radio">Delivery</label>
+                </p>
+
+                <!-- order information -->
+                <h1>Order Information</h1>
+
+                <!-- flavor selection -->
+                <label for="cookie-category">Cookie Flavor</label>
+                <select name="cookie-categoy" id="cookie-category" onchange="displayFlavor()">
+                    <option value="">Please Choose One</option>
+                    <option value="classic">Classic</option>
+                    <option value="fancy">Fancy</option>
+                </select>
+                <!-- classic options -->
+                <div id="classic-options">
+                    <p>
+                        <input type="checkbox" name="sugar-cookie" id="sugar-cookie">
+                        <label for="sugar-cookie" class="check-or-radio">Sugar Cookie</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" name="choco-chip" id="choco-chip">
+                        <label for="choco-chip" class="check-or-radio">Chocolate Chip</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" name="oatmeal-raisin" id="oatmeal-raisin">
+                        <label for="oatmeal-raisin" class="check-or-radio">Oatmeal Raisin</label>
+                    </p>
+                </div>
+
+                <!-- fancy options -->
+                <div id="fancy-options">
+                    <p>
+                        <input type="checkbox" name="mint-choco-chip" id="mint-choco-chip">
+                        <label for="mint-choco-chip" class="check-or-radio">Mint Chocolate Chip</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" name="macaroons" id="macaroons">
+                        <label for="macaroons" class="check-or-radio">Macaroons</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" name="white-chocolate-mac" id="white-chocolate-mac">
+                        <label for="white-chocolate-mac" class="check-or-radio">White Chocolate Macadamia</label>
+                    </p>
+                </div>
+
+                <!-- bundle options -->
+                <label for="size-options">Size Options</label>
+                <select name="bundles" id="bundles" onchange="displaySizes()">
+                    <option value="">Please Choose One</option>
+                    <option value="BL">Bundle</option>
+                    <option value="BK">Bulk</option>
+                </select>
+
+                <!-- bundle sizes-->
+                <div id="bundle-options">
+                    <p>
+                        <input type="radio" name="bundle-amount" id="sm-6" value="sm-6">
+                        <label for="sm-6" class="check-or-radio">Small - 6 Cookies</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="bundle-amount" id="med-12" value="med-12">
+                        <label for="med-12" class="check-or-radio">Medium - 12 Cookies</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="bundle-amount" id="lrg-24" value="lrg-24">
+                        <label for="lrg-24" class="check-or-radio">Large - 24 Cookies</label>
+                    </p>
+                </div>
+
+                <!-- bulk sizes-->
+                <div id="bulk-options">
+                    <p>
+                        <input type="radio" name="bulk-amount" id="sm-60" value="sm-60">
+                        <label for="sm-60" class="check-or-radio">Small - 60 Cookies</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="bulk-amount" id="med-120" value="med-120">
+                        <label for="med-120" class="check-or-radio">Medium - 120 Cookies</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="bulk-amount" id="lrg-240" value="lrg-240">
+                        <label for="lrg-240" class="check-or-radio">Large - 240 Cookies</label>
+                    </p>
+                </div>
+            </section><!-- close customer info -->
+
+            <section id="payment-info">
+                <h1>Payment Information</h1>
+
+                <p>
+                    <label for="card-name">Cardholder Name</label>
+                    <input type="text" name="card-name" id="card-name" placeholder="Jane Doe">
+                </p>
+
+                <p>
+                    <label for="card-number">Card Number</label>
+                    <input type="text" name="card-number" id="card-number" placeholder="#### #### #### ####">
+                </p>
+
+                <div class="order-summary">
+                    <p>
+                        <label for="exp-date">Exp Date</label>
+                        <input type="text" name="exp-date" id="exp-date" placeholder="01/27">
+                    </p>
+    
+                    <p>
+                        <label for="CVV">CVV</label>
+                        <input type="text" name="CVV" id="CVV" placeholder="123">
+                    </p>
+                </div>
+
+                <h1>Order Summary</h1>
+                <div class="order-summary">
+                    <p>
+                        Sub total: <br>
+                        Shipping: <br>
+                        Tax: <br>
+                        <strong>Total:</strong> 
+                    </p>
+                    <p style="text-align: right;">
+                        $100 <br>
+                        0 <br>
+                        $5 <br>
+                        $105
+                    </p>
+                </div>
+
+                <!-- buttons -->
+                <p>
+                    <input type="submit" name="submit" id="submit" value="Order">
+                    <input type="reset" name="reset" id="reset" value="Clear">
+                </p>
+            </section><!-- close payment info-->
+        </form><!-- close form -->
+
+        <footer>
+            <a href="#"><img src="images/logo-cookie.png" alt="logo, sugar cookie"></a>
+            
+            <div>
+                <h3>Cookies!</h3>
+                <p>Est. 2023</p>
+                <p>Thanks to Pexels for providing the pictures</p>
+                <p>Picture credits avaiable <a href="photo-credits.txt" target="_blank">here</a></p>
+            </div>
+
+            <div>
+                <a href="#"><img src="images/cookie-icon.png" alt="cookie icon, chocolate chip"></a>
+                <a href="#"><img src="images/dark-cookie-icon.png" alt="cookie icon, dark chocolate"></a>
+            </div>
+        </footer>
+    </div><!-- close container div -->
+</body>
+</html>

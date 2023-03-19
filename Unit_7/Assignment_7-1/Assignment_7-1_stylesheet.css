@@ -1,0 +1,155 @@
+/* 
+    SCSS stylesheet for Assignment 4-1
+    Author: Abby Poplawski
+    Created: 2/13/2023
+*/
+body {
+  background-color: #ede4dd;
+  font-family: "Varela Round", tahoma, arial, sans-serif;
+}
+
+.container {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  width: 1200px;
+  height: 800px;
+  margin: 25px auto;
+}
+
+nav {
+  background-color: #9a938e;
+  float: left;
+  width: 200px;
+  height: 800px;
+  transition: width 1s, height 1s;
+}
+nav img {
+  padding: 25px;
+}
+nav a {
+  display: block;
+  padding: 25px 35px;
+  text-decoration: none;
+  font-size: 1.15em;
+  color: #fff;
+}
+nav a:hover {
+  background-color: #646464;
+}
+
+aside {
+  background-color: #fcac5c;
+  float: right;
+  width: 200px;
+  height: 800px;
+  transition: width 1s, height 1s;
+}
+aside h3 {
+  padding: 160px 25px 0px 35px;
+  line-height: 1.3em;
+}
+aside ul {
+  list-style: none;
+  -webkit-padding-start: 25px;
+          padding-inline-start: 25px;
+}
+aside li {
+  padding: 10px 25px;
+}
+
+main {
+  margin: 0;
+  padding: 25px;
+  overflow: auto;
+}
+main h1 {
+  margin: 0;
+  padding: 25px 0 15px 35px;
+  border: 3px solid #fcac5c;
+  border-style: none none solid none;
+  color: #2d2d2d;
+  font-size: 2.5em;
+}
+main img[alt~=sleeping] {
+  float: right;
+  margin: 110px 35px 0 35px;
+  border-radius: 3px;
+}
+main img[alt~=sitting] {
+  float: left;
+  margin: 15px 35px 0 35px;
+  border-radius: 3px;
+}
+main img[alt~=staring] {
+  float: right;
+  margin: 15px 35px 0 35px;
+  border-radius: 3px;
+}
+main h3 {
+  padding: 25px 45px 0 45px;
+  color: #646464;
+  font-size: 1.5em;
+}
+main p {
+  padding: 25px 45px 0 45px;
+  color: #646464;
+  font-size: 1.2em;
+  line-height: 1.35em;
+}
+
+@media screen and (max-width: 1250px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  nav {
+    width: 100%;
+    height: 250px;
+    transition: width 1s, height 1s;
+  }
+  nav img {
+    display: block;
+  }
+  nav a {
+    display: inline-block;
+  }
+  aside {
+    height: 100%;
+    transition: height 1s;
+  }
+  aside h3 {
+    padding: 10px 35px;
+  }
+  aside ul {
+    margin-bottom: 35px;
+  }
+  main img[alt~=sleeping], main img[alt~=sitting], main img[alt~=staring] {
+    margin: 50px 35px;
+  }
+}
+@media screen and (max-width: 600px) {
+  aside {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    transition: width 1s, height 1s;
+  }
+  aside li {
+    display: inline-block;
+  }
+  main img[alt~=sleeping], main img[alt~=sitting], main img[alt~=staring] {
+    width: 100%;
+    height: auto;
+    margin: 35px 0;
+  }
+  main h3 {
+    padding: 0;
+  }
+  main p {
+    font-size: 1em;
+    line-height: 1.25em;
+    padding: 0;
+  }
+}/*# sourceMappingURL=Assignment_7-1_stylesheet.css.map */
