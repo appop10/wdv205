@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Doogies home page">
+    <title>Doogies Home</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Yeseva+One&display=swap" rel="stylesheet">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/main.scss">
+    <link rel="stylesheet" href="stylesheets/main_mq.css">
+    <link rel="stylesheet" href="stylesheets/main_mq.scss">
+    <link rel="stylesheet" href="stylesheets/home/home.css">
+    <link rel="stylesheet" href="stylesheets/home/home.scss">
+    <link rel="stylesheet" href="stylesheets/home/home_mq.css">
+    <link rel="stylesheet" href="stylesheets/home/home_mq.scss">
+
+    <!-- JavaScript -->
+    <script src="js_files/main.js"></script>
+    <script src="js_files/home.js"></script>
+</head>
+<body onload="pageLoad()">
+    <nav>
+        <a href="doogies_home.html">
+            <img src="doogies_images/doogies-logo.png" alt="doogies logo">
+            
+            <div>
+                <p value="doogies">DOOGIES</p>
+                <p>Performance Venue</p>
+            </div>
+        </a>
+
+        <div>
+            <a onclick="showMenu()">
+                <span></span>
+                <span></span>
+            </a>
+
+            <ul>
+                <li><a href="doogies_events.html">EVENTS</a></li>
+                <li><a href="doogies_venue.html">VENUE</a></li>
+                <li><a href="doogies_faq.html">FAQs</a></li>
+                <li><a href="doogies_contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="banner-ad"><!-- Banner Ad -->
+        <div class="exit" onclick="closeAd()">X</div>
+        
+        <p>Advertisement</p>
+        
+        <div class="ad-animation">
+            <img src="doogies_images/concert-banner.jpg" alt="hand silhouettes at a concert with purple lights">
+
+            <img src="doogies_images/beer-logo.png" alt="gold rush beer logo">
+            <div class="ad-words">
+                <p id="first-line">When the lights go out</p>
+                <p id="second-line">Stand out in the crowd</p>
+            </div>
+        </div>
+    </div><!-- close Banner Ad -->
+
+    <header>
+        <div>
+            <h1>Welcome to Doogies</h1>
+            <p>Below, you'll find out about who we are, what's popular right now, and what our venue has to offer</p>
+        </div>
+    </header>
+
+    <div class="about"><!-- About -->
+        <h2>Who We Are</h2>
+        <p class="subtitle">
+            Est. 2010
+            <br>Ava Anderson and Justin Smith wanted to see if they could create a unique event space in Colorado Springs
+        </p>
+        <p class="two-cols">The founders saw the potential in this old, abandoned factory and wanted to share it with the rest of the city. After years of planning the reconstruction, they've created an event space that has hosted performances from Acre Husk, Chili Bars, Funnel Sixth, and many more.</p>
+    </div><!-- close About -->
+
+    <div class="popular"><!-- Popular -->
+        <h2>Popular Right Now</h2>
+    </div><!-- close Popular -->
+
+    <div class="venue-info"><!-- Venue -->
+        <img src="doogies_images/concert-venue-wideshot.jpg" alt="concert venue wideshot of stage and crowd">
+        <h2>Venue Rental</h2>
+
+        <section>
+            <div class="call-to-action"><!-- call to action -->
+                <h3>Let Us Host Your Event</h3>
+                <p>We have several options to ensure you get the experience you're looking for!</p>
+                <a href="doogies_venue.html">Learn More</a>
+            </div><!-- close call to action -->
+    
+            <div class="package-options"><!-- package options -->
+                <p>Concert Package</p>
+                <p>Event Package</p>
+                <p>Festival Package</p>
+                <p>Custom Package</p>
+            </div><!-- close package options-->
+        </section>
+    </div><!-- close Venue -->
+
+    <footer>
+        <div><!-- logo and socials -->
+            <div><!-- logo and address -->
+                <img src="doogies_images/doogies-logo.png" alt="doogies logo">
+                <p>
+                    Doogies Performance Venue
+                    <br>5132 Chester Rd
+                    <br>Colorado Springs, CO 65012
+                </p>
+            </div><!-- close logo and address-->
+            
+            <div>
+                <p>
+                    <img src="doogies_images/social.png" alt="instagram, twitter, facebook icons">
+                    <br>&copy; Doogies 2023
+                </p>
+            </div>
+        </div><!-- close logo and socials -->
+
+        <div><!-- contact, services, information -->
+            <div>
+                <p>CONTACT US</p>
+                <p>
+                    (123) 123 - 1234
+                    <br>doogiesinfo@email.com
+                </p>
+            </div>
+
+            <div>
+                <p>SERVICES</p>
+                <p>
+                    <a>Find Tickets</a>
+                    <br><a>Venue Rental</a>
+                    <br><a>FAQ's</a>
+                </p>
+            </div>
+
+            <div>
+                <p>INFORMATION</p>
+                <p>
+                    <a>Work With Us</a>
+                    <br><a>Venue Policy</a>
+                    <br><a>Terms & Conditions</a>
+                </p>
+            </div>
+        </div><!-- close contact, services, information -->
+    </footer>
+</body>
+</html>

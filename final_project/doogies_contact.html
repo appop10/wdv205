@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Doogies contact page">
+    <title>Doogies Contact</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="stylesheets/contact/contact.css">
+    <link rel="stylesheet" href="stylesheets/contact/contact.scss">
+    <link rel="stylesheet" href="stylesheets/contact/contact_mq.css">
+    <link rel="stylesheet" href="stylesheets/contact/contact_mq.scss">
+
+    <!-- JavaScript -->
+    <script src="js_files/main.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="doogies_home.html">
+            <img src="doogies_images/doogies-logo.png" alt="doogies logo">
+            
+            <div>
+                <p value="doogies">DOOGIES</p>
+                <p>Performance Venue</p>
+            </div>
+        </a>
+
+        <div>
+            <a onclick="showMenu()">
+                <span></span>
+                <span></span>
+            </a>
+
+            <ul>
+                <li><a href="doogies_events.html">EVENTS</a></li>
+                <li><a href="doogies_venue.html">VENUE</a></li>
+                <li><a href="doogies_faq.html">FAQs</a></li>
+                <li><a href="doogies_contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div>
+            <h1>Contact Us</h1>
+            <p>We're here to answer any questions that you may have about tickets, events, or the venue.</p>
+        </div>
+    </header>
+
+    <main>
+        <h2>Our Information</h2>
+
+        <div><!-- information and form -->
+            <div class="information"><!-- location, phone, hours -->
+                <section>
+                    <h3>Location</h3>
+                    <p>
+                        5132 Chester Rd
+                        <br>Colorado Springs, CO 65012
+                    </p>
+                </section>
+    
+                <section>
+                    <h3>Phone</h3>
+                    <p>(123) 123 - 1234</p>
+                </section>
+    
+                <section>
+                    <h3>Hours</h3>
+                    <div class="hours">
+                        <p>
+                            Sunday
+                            <br>Monday
+                            <br>Tuesday
+                            <br>Wednesday
+                            <br>Thursday
+                            <br>Friday
+                            <br>Saturday
+                        </p>
+                        <p>
+                            3:00 PM - 11:00 PM
+                            <br>10:00 AM - 9:00 PM
+                            <br>10:00 AM - 9:00 PM
+                            <br>10:00 AM - 9:00 PM
+                            <br>10:00 AM - 9:00 PM
+                            <br>1:00 PM - 11:00 PM
+                            <br>1:00 PM - 11:00 PM
+                        </p>
+                    </div>
+                </section>
+            </div><!-- close location, phone, hours -->
+    
+            <form method="post" action="#"><!-- contact form -->
+                <legend>Send Us A Message</legend>
+    
+                <p>
+                    <label for="fullName">FULL NAME</label>
+                    <input type="text" name="fullName" id="fullName" placeholder="Jane Doe">
+                </p>
+    
+                <p>
+                    <label for="email">EMAIL</label>
+                    <input type="email" name="email" id="email" placeholder="janedoe@email.com">
+                </p>
+    
+                <p>
+                    <label for="messageTopic">MESSAGE TOPIC</label>
+                    <select name="messageTopic">
+                        <option value="">Please select one</option>
+                        <option value="ticket question">Ticket Question</option>
+                        <option value="event question">Event Question</option>
+                        <option value="venue question">Venue Question</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+    
+                <p>
+                    <label for="message">MESSAGE</label>
+                    <textarea name="message" id="message" rows="8" cols="45"></textarea>
+                </p>
+
+                <div>
+                    <input type="submit" name="submit" id="submit" value="Send" class="button">
+                    <input type="reset" name="reset" id="reset" value="Reset" class="button">
+                </div>
+            </form><!-- close contact form -->
+        </div><!-- information and form -->
+    </main>
+
+    <footer>
+        <div><!-- logo and socials -->
+            <div><!-- logo and address -->
+                <img src="doogies_images/doogies-logo.png" alt="doogies logo">
+                <p>
+                    Doogies Performance Venue
+                    <br>5132 Chester Rd
+                    <br>Colorado Springs, CO 65012
+                </p>
+            </div><!-- close logo and address-->
+            
+            <div>
+                <img src="doogies_images/social.png" alt="instagram, twitter, facebook icons">
+                <p>&copy; Doogies 2023</p>
+            </div>
+        </div><!-- close logo and socials -->
+
+        <div><!-- contact, services, information -->
+            <div>
+                <p>CONTACT US</p>
+                <p>
+                    (123) 123 - 1234
+                    <br>doogiesinfo@email.com
+                </p>
+            </div>
+
+            <div>
+                <p>SERVICES</p>
+                <p>
+                    <a>Find Tickets</a>
+                    <br><a>Venue Rental</a>
+                    <br><a>FAQ's</a>
+                </p>
+            </div>
+
+            <div>
+                <p>INFORMATION</p>
+                <p>
+                    <a>Work With Us</a>
+                    <br><a>Venue Policy</a>
+                    <br><a>Terms & Conditions</a>
+                </p>
+            </div>
+        </div><!-- close contact, services, information -->
+    </footer>
+</body>
+</html>

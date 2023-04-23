@@ -1,0 +1,117 @@
+/*
+    Doogies Venue page stylesheet
+    Created: 4/17/2023
+*/
+
+@use '../main.scss';
+
+/** General **/
+body {
+    background-image: url("../../doogies_images/background_images/blue-stage-lights-bw.jpg");
+    @include main.background-image;
+}
+
+/** About the Venue **/
+div.venue-history {
+    @include main.top-section;
+
+    h2 {
+        @include main.section-title;
+    }
+}
+div.venue-history > div {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+
+    img {
+        height: 45vh;
+        @include main.white-shadow;
+    }
+    .history-info {
+        padding: 2em;
+
+        h3 {
+            font-size: 1.8em;
+            margin-bottom: 1em;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.25em;
+        }
+    }
+}
+
+/** Package Options **/
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section > div {
+    display: flex;
+    width: 75%;
+    margin: 1em 0; 
+
+    img {
+        display: block;
+        width: 37vw;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: main.$color3;
+        background-color: main.$color2-transparent;
+        padding: 2em 0;
+    }
+    h3 {
+        @include main.section-title;
+        font-family: 'Yeseva One', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    h3.move-right {
+        position: relative;
+        left: 10vh;
+    }
+    h3.move-left {
+        position: relative;
+        right: 10vh;
+    }
+    p {
+        font-size: 1.3em;
+        line-height: 1.35em;
+        padding: 0 2.5em;
+        padding-bottom: 3em;
+    }
+}
+
+/** Venue Policy **/
+div.venue-policy {
+    @include main.top-section;
+
+    h2 {
+        @include main.section-title;
+    }
+    p {
+        width: 60%;
+        margin: 0 auto;
+        font-size: 1.8em;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+    p[class|="two-cols"] {
+        font-size: 1.3em;
+        text-align: left;
+    }
+    a {
+        background-color: main.$color1;
+        color: main.$color3;
+        font-size: 1.3em;
+        padding: 0.3em 3em;
+        border-radius: 5px;
+        font-size: 0.9em;
+        text-decoration: none;
+    }
+}

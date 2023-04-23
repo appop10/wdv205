@@ -1,0 +1,272 @@
+/*
+    Nav, header, footer, mixins, and variables shared between Doogies stylesheets
+    Created: 4/11/2023
+*/
+/** General **/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p.two-cols {
+  -moz-column-count: 2;
+       column-count: 2;
+  padding-bottom: 1em;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.button:active {
+  transform: translateY(0.8vh);
+  transition: transform 0.2s linear;
+}
+
+.hamburger-menu {
+  height: 27vh;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+  font-family: "Yeseva One", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/** Nav Bar **/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 98%;
+  margin: 0 auto;
+  padding: 0 3em;
+  background-color: #0F0524;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.862745098);
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+nav a[href|="doogies_home.html"] {
+  display: flex;
+  align-items: center;
+  margin: 1em 0;
+}
+nav a[href|="doogies_home.html"] img {
+  height: 3em;
+}
+nav a[href|="doogies_home.html"] div {
+  margin: 0 1em;
+}
+nav a[href|="doogies_home.html"] div p {
+  font-size: 1.2em;
+}
+nav a[href|="doogies_home.html"] div p[value|=doogies] {
+  font-size: 1.5em;
+}
+nav div > a {
+  width: 15vw;
+  height: 15vw;
+  display: none;
+}
+nav div > a span {
+  display: block;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 0.5vh;
+  width: 10vw;
+  margin: 1em;
+  transition: transform 1s linear;
+}
+nav div > a .top-bar {
+  transform: rotateZ(45deg) translate(0vw, 3vw);
+}
+nav div > a .bottom-bar {
+  transform: rotateZ(-45deg) translate(0.5vw, -3.5vw);
+}
+nav ul {
+  display: flex;
+  align-items: flex-end;
+  transition: height 1s ease-in-out;
+}
+nav ul li {
+  font-size: 1.1em;
+  margin: 1em 2em;
+}
+
+/** Header **/
+header {
+  height: 85vh;
+}
+header div {
+  position: absolute;
+  right: 0;
+  bottom: 5em;
+  padding: 1em 5em;
+  width: 700px;
+  color: #fff;
+  background-color: rgba(15, 5, 36, 0.9176470588);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.862745098);
+}
+header h1 {
+  font-size: 3em;
+}
+header p {
+  font-size: 1.3em;
+  margin: 0.5em 0;
+  line-height: 1.4em;
+}
+
+/** Footer **/
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  margin: 0 auto;
+  padding: 0.5em 3em;
+  color: #fff;
+  background-color: #0F0524;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.862745098);
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-between;
+}
+footer > div div {
+  display: flex;
+  margin: 1.5em 0;
+}
+footer > div div img[alt|="doogies logo"] {
+  display: block;
+  height: 5em;
+  margin: 0.5em 2em 0.5em 0;
+}
+footer > div div img[alt~=icons] {
+  height: 2em;
+}
+footer > div div p {
+  margin: 1em 0.5em;
+}
+
+/*
+    Doogies Venue page stylesheet
+    Created: 4/17/2023
+*/
+/** General **/
+body {
+  background-image: url("../../doogies_images/background_images/outdoor-concert-pink-and-blue-lights-bw.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/** Main **/
+main {
+  margin: 8em 0;
+  padding: 2em 0;
+  color: #fff;
+  background-color: rgba(15, 5, 36, 0.9176470588);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.862745098);
+}
+main h2 {
+  background-color: #9E004C;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5em 3em;
+  margin-bottom: 2em;
+  font-size: 2em;
+  text-shadow: 0 0 5px #0F0524;
+  border-radius: 5px;
+}
+
+main > div {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+main > div div.information {
+  margin: 1em 0;
+}
+main > div div.information section {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 3em;
+}
+main > div div.information section h3 {
+  font-size: 1.8em;
+  width: 10vw;
+  text-align: right;
+  margin-right: 2em;
+}
+main > div div.information section p {
+  font-size: 1.3em;
+  line-height: 1.35em;
+}
+main > div div.information section div.hours {
+  display: flex;
+  justify-content: space-between;
+  width: 27vw;
+}
+main > div div.information section div.hours p {
+  line-height: 2em;
+}
+main > div form {
+  display: flex;
+  flex-direction: column;
+  background-color: #d0d0d0;
+  color: #0F0524;
+  padding: 2em;
+}
+main > div form legend {
+  font-size: 1.8em;
+  margin-bottom: 1em;
+  border: 1px solid #9E004C;
+  border-style: none none solid none;
+}
+main > div form p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  font-size: 1.1em;
+  padding: 0 1em;
+}
+main > div form p label {
+  line-height: 2em;
+}
+main > div form p input, main > div form p select, main > div form p textarea {
+  color: #9E004C;
+  font-size: 1em;
+  border: 1px solid #9E004C;
+  border-radius: 3px;
+  padding: 0.5em;
+}
+main > div form p textarea {
+  resize: none;
+}
+main > div form div {
+  font-size: 1.1em;
+  padding: 0 1em;
+}
+main > div form div input {
+  color: #fff;
+  background-color: #9E004C;
+  padding: 0.5em 2em;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  margin-right: 1em;
+  box-shadow: 3px 3px 10px #0F0524;
+}/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,195 @@
+/*
+    Nav, header, footer, mixins, and variables shared between Doogies stylesheets
+    Created: 4/11/2023
+*/
+$color1: #9E004C;
+$color2: #0F0524;
+$color2-transparent: #0f0524ea;
+$color3: #fff;
+$color3-transparent: #ffffffdc;
+$color4: #d0d0d0;
+
+@mixin white-shadow {
+    box-shadow: 0 0 10px $color3-transparent;
+}
+@mixin dark-shadow {
+    box-shadow: 3px 3px 10px $color2;
+}
+@mixin section-title {
+    background-color: $color1;
+    width: fit-content;
+    padding: 0.5em 3em;
+    margin-bottom: 2em;
+    font-size: 2em;
+    text-shadow: 0 0 5px $color2;
+    border-radius: 5px;
+}
+@mixin background-image {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@mixin top-section {
+    margin: 8em 0;
+    padding: 2em 0;
+    color: $color3;
+    background-color: $color2-transparent;
+    @include white-shadow;
+}
+
+/** General **/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p.two-cols {
+    column-count: 2;
+    padding-bottom: 1em;
+}
+a:hover {
+    cursor: pointer;
+}
+.button:active {
+    transform: translateY(0.8vh);
+    transition: transform 0.2s linear;
+}
+.hamburger-menu {
+    height: 27vh;
+}
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1, h2 {
+    font-family: 'Yeseva One', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+}
+
+/** Nav Bar **/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 98%;
+    margin: 0 auto;
+    padding: 0 3em;
+    background-color: $color2;
+    z-index: 1;
+    @include white-shadow();
+
+    a {
+        color: $color3;
+        text-decoration: none;
+    }
+    a[href|="doogies_home.html"] {
+        display: flex;
+        align-items: center;
+        margin: 1em 0;
+
+        img {
+            height: 3em;
+        }
+        div {
+            margin: 0 1em;
+
+            p {
+                font-size: 1.2em;
+            }
+            p[value|="doogies"] {
+                font-size: 1.5em;
+            }
+        }
+    }
+    div > a {
+        width: 15vw;
+        height: 15vw;
+        display: none;
+        
+        span {
+            display: block;
+            background-color: $color3;
+            border-radius: 10px;
+            height: 0.5vh;
+            width: 10vw;
+            margin: 1em;
+            transition: transform 1s linear;
+        }
+        .top-bar {
+            transform: rotateZ(45deg) translate(0vw, 3vw);
+        }
+        .bottom-bar {
+            transform: rotateZ(-45deg) translate(0.5vw, -3.5vw);
+        }
+    }
+    ul {
+        display: flex;
+        align-items: flex-end;
+        transition: height 1s ease-in-out;
+
+        li {
+            font-size: 1.1em;
+            margin: 1em 2em;
+        }
+    }
+}
+
+/** Header **/
+header {
+    height: 85vh;
+
+    div {
+        position: absolute;
+        right: 0;
+        bottom: 5em;
+        padding: 1em 5em;
+        width: 700px;
+        color: $color3;
+        background-color: $color2-transparent;
+        @include white-shadow();
+    }
+    h1 {
+        font-size: 3em;
+    }
+    p {
+        font-size: 1.3em;
+        margin: 0.5em 0;
+        line-height: 1.4em;
+    }
+}
+
+/** Footer **/
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    margin: 0 auto;
+    padding: 0.5em 3em;
+    color: $color3;
+    background-color: $color2;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    @include white-shadow();
+}
+footer > div {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        display: flex;
+        margin: 1.5em 0;
+
+        img[alt|="doogies logo"] {
+            display: block;
+            height: 5em;
+            margin: 0.5em 2em 0.5em 0;
+        }
+        img[alt~="icons"] {
+            height: 2em;
+        }
+        p {
+            margin: 1em 0.5em;
+        }
+    }
+}

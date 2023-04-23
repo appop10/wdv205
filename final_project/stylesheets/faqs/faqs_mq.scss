@@ -1,0 +1,33 @@
+/*
+    Media query page for Doogies Frequent Questions
+*/
+@use '../main_mq.scss';
+
+@media only screen and (max-width: 1050px) {
+    div.questions {
+        div {
+            width: 80%;
+
+            p.hide-content {
+                height: 22vh;
+            }
+        }
+    }
+    div.other-questions {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    div.questions {
+        div {
+            width: 90%;
+
+            p.hide-content {
+                height: 65vh;
+            }
+        }
+    }
+    div.other-questions {
+        width: 95%;
+    }
+}

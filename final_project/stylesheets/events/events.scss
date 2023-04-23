@@ -1,0 +1,128 @@
+/*
+    Doogies Event page stylesheet
+    Created: 4/17/2023
+*/
+
+@use '../main.scss';
+
+/** General **/
+body {
+    background-image: url("../../doogies_images/background_images/stage-with-white-lights-bw.jpg");
+    @include main.background-image;
+}
+
+/** Popular **/
+div.popular {
+    @include main.top-section;
+
+    h2 {
+        @include main.section-title;
+    }
+    div.events-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 3em;
+
+        div {
+            height: 250px;
+            width: 350px;
+
+            img {
+                position: relative;
+                height: 100%;
+                width: 100%;
+            }
+            p {
+                position: relative;
+                bottom: 20vh;
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                background-color: main.$color3-transparent;
+                color: main.$color2;
+                font-size: 1.8em;
+                line-height: 1.5em;
+                padding: 0.5em 1em; 
+            }
+            a {
+                background-color: main.$color1;
+                color: main.$color3;
+                text-decoration: none;
+                padding: 0 1em;
+                border-radius: 5px;
+                font-size: 0.7em;
+                text-align: center;
+                @include main.dark-shadow;
+            }
+        }
+    }
+}
+
+/** Event List **/
+div.event-list {
+    width: 80%;
+    margin: 8em auto;
+
+    section {
+        div.indv-event {
+            display: flex;
+            margin: 3em 0;
+            background-color: main.$color3-transparent;
+
+            img {
+                height: 40vh;
+            }
+            div {
+               padding: 1em;
+            }
+            h3 {
+                display: flex;;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-bottom: 1.5em;
+
+                a {
+                    display: block;
+                    font-size: 1.8em;
+                    color: main.$color1;
+                }
+            }
+            p {
+                font-size: 1.3em;
+                line-height: 1.35em;
+            }
+            a[href|="#"] {
+                position: relative;
+                top: 50px;
+                background-color: main.$color1;
+                color: main.$color3;
+                font-size: 1.3em;
+                padding: 0.3em 3em;
+                border-radius: 5px;
+                text-decoration: none;
+                @include main.dark-shadow;
+            }
+        }
+    }
+}
+div.event-list > div {
+    padding: 2em 0;
+    margin-bottom: 3em;
+    color: main.$color3;
+    background-color: main.$color2-transparent;
+    @include main.white-shadow;
+
+    h2 {
+        @include main.section-title;
+        position: relative;
+        right: 60px;
+    }
+    p {
+        font-size: 1.5em;
+        line-height: 1.55em;
+        width: 60%;
+        margin: 0 auto;
+        padding-bottom: 1em;
+        text-align: center;
+    }
+}

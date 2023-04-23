@@ -1,0 +1,110 @@
+/*
+    Doogies Venue page stylesheet
+    Created: 4/17/2023
+*/
+
+@use '../main.scss';
+
+/** General **/
+body {
+    background-image: url("../../doogies_images/background_images/outdoor-concert-pink-and-blue-lights-bw.jpg");
+    @include main.background-image;
+}
+
+/** Main **/
+main {
+    @include main.top-section;
+
+    h2 {
+        @include main.section-title;
+    }
+    // working on splitting the info contact form
+    // the look and position of the rest of the elements
+}
+main > div {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+
+    div.information {
+        margin: 1em 0;
+
+        section {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 3em;
+
+            h3 {
+                font-size: 1.8em;
+                width: 10vw;
+                text-align: right;
+                margin-right: 2em;
+            }
+            p {
+                font-size: 1.3em;
+                line-height: 1.35em;
+            }
+            div.hours {
+                display: flex;
+                justify-content: space-between;
+                width: 27vw;
+
+                p {
+                    line-height: 2em;
+                }
+            }
+        }
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        background-color: main.$color4;
+        color: main.$color2;
+        padding: 2em;
+
+        legend {
+            font-size: 1.8em;
+            margin-bottom: 1em;
+            border: 1px solid main.$color1;
+            border-style: none none solid none;
+        }
+        p {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1em;
+            font-size: 1.1em;
+            padding: 0 1em;
+
+            label {
+                line-height: 2em;
+            }
+            input, select, textarea {
+                color: main.$color1;
+                font-size: 1em;
+                border: 1px solid main.$color1;
+                border-radius: 3px;
+                padding: 0.5em;
+            }
+            textarea {
+                resize: none;
+            }
+        }
+        div {
+            font-size: 1.1em;
+            padding: 0 1em;
+
+            input {
+                color: main.$color3;
+                background-color: main.$color1;
+                padding: 0.5em 2em;
+                font-size: 1.1em;
+                border: none;
+                border-radius: 5px;
+                margin-right: 1em;
+                @include main.dark-shadow;
+            }
+        }
+    }
+}
