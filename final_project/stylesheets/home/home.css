@@ -162,6 +162,14 @@ footer > div div p {
     Doogies Home page stylesheet
     Created: 4/11/2023
 */
+@keyframes popup {
+  from {
+    transform: translateY(50vh);
+  }
+  to {
+    transform: translateY(0vh);
+  }
+}
 @keyframes ad-line1 {
   0% {
     filter: opacity(0%);
@@ -243,11 +251,15 @@ div.banner-ad {
   width: 100%;
   margin: 0;
   padding: 5px;
+  padding-bottom: 20px;
   background-color: #121212;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 1;
+  animation-name: popup;
+  animation-duration: 2s;
+  transition: transform 3s ease-out;
 }
 div.banner-ad div.exit {
   align-self: flex-end;
